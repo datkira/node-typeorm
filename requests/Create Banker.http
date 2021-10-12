@@ -1,0 +1,10 @@
+POST http://localhost:8080/api/banker
+Content-Type: application/json
+
+{
+  "firstName": "David",
+  "lastName": "Month",
+  "email": "david@example.com",
+  "cardNumber": 364,
+  "employeeNumber": 1234123
+}

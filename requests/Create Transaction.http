@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/client/1/transaction
+Content-Type: application/json
+
+{
+  "type": "deposit",
+  "amount": 1000
+}
