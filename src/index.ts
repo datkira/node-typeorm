@@ -8,6 +8,7 @@ import { createClientRoute } from './routes/create_client'
 import { createBankerRoute } from './routes/create_banker'
 import { createTransactionRouter } from './routes/create_transaction'
 import { connectBankerToClientRouter } from './routes/connect_banker_to_client'
+import {getAllClients} from './routes/get_all_clients'
 import dotenv from "dotenv"
 
 dotenv.config()
@@ -37,6 +38,7 @@ const main = async () => {
     app.use(createBankerRoute)
     app.use(createTransactionRouter)
     app.use(connectBankerToClientRouter)
+    app.use(getAllClients)
 
     app.listen(8080, () => {
       console.log('Now running on port 8080')
@@ -48,3 +50,5 @@ const main = async () => {
 }
 
 main()
+
+module.exports = app
