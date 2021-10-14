@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@types/express": "^4.17.13",
     "colors": "^1.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -13,9 +12,15 @@
     "typeorm": "^0.2.38",
     "typescript": "^4.4.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/mocha": "^9.0.0",
+    "@types/supertest": "^2.0.11",
+    "mocha": "^9.1.2",
+    "supertest": "^6.1.6"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --watch src/test/*.test.ts",
     "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts"
   },
   "author": "",
